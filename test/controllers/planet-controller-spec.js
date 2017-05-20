@@ -15,6 +15,10 @@ describe("Planet Controller", function() {
     });
 
     describe("Planet descriptions", function() {
+        it("Should describe mercury correctly", function() {
+            expect($scope.describePlanet("mercury")).toEqual("It's small and hot");
+        });
+        
         it("Should describe mars correctly", function() {
             expect($scope.describePlanet("mars")).toEqual("It's red");
         });
