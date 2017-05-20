@@ -13,8 +13,8 @@ Create app and test folders <br />
 >> location of tests test\\\*\*\\\*.js
 
 
-bower install angular<br />
-bower install angular-mocks<br />
-bower install angular-resource<br />
+*bower install angular*<br />
+*bower install angular-mocks*<br />
+*bower install angular-resource*<br />
 
-Use *karma start* in a command window at the root of the project to kick off the karma session
+Use *karma start* in a command window at the root of the project to kick off the karma test session
