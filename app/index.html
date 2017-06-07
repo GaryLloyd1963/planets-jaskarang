@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Planets</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+
+    <script src="./_module/module.js"></script>
+    <script src="./configuration/config.js"></script>
+    
+    
+    <script src="./data/planet-fake-data.js"></script>
+    <script src="./services/planet-data-service.js"></script>
+    <script src="./controllers/planet-controller.js"></script>
+
+    <link rel="icon" href="garfy70.ico">
+</head>
+<body ng-app="planets">
+    <ng-include src="'./templates/planet-data-viewer.html'"></ng-include>
+</body>
+</html>

@@ -2,6 +2,11 @@ app.controller('PlanetController',['$scope', 'planetDataService',
 function($scope, planetDataService) {
 
     $scope.planetData = {};
+    $scope.selectedPlanet = "";
+
+    $scope.planetDataIsEmpty = function() {
+        return ($scope.planetData === undefined || $scope.planetData.planetInfo === undefined);
+    }
 
     $scope.describePlanet = function(planetName) {
         if ( !$scope.planetData || $scope.planetData.length == 0) {
@@ -23,6 +28,7 @@ function($scope, planetDataService) {
         planetDataService.getPlanetData()
             .then(function (response) {
                 $scope.planetData = response;
+                console.log("got planet data " + $scope.planetData.title);
             }, function () {
                 Console.log("Failed to retrieve the planet data.");
             });

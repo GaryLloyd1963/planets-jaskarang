@@ -1,0 +1,11 @@
+<div ng-controller="PlanetController">
+    <div id="planet-data-heading">
+        <h1>Pick a planet</h1>
+        <div id="planet-selector">
+            <select ng-model="selectedPlanet" ng-disabled="planetDataIsEmpty()">
+                <option ng-repeat="planet in planetData.planetInfo">{{planet.name}}</option>
+            </select>
+        </div>
+        <div> Selected planet description = {{describePlanet(selectedPlanet)}}</div>
+    </div>
+</div>
