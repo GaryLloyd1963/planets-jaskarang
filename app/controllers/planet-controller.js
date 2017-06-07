@@ -29,9 +29,8 @@ function($scope, planetDataService) {
         planetDataService.getPlanetData()
             .then(function (response) {
                 vm.planetData = response;
-                console.log("got planet data " + vm.planetData.title);
             }, function () {
-                Console.log("Failed to retrieve the planet data.");
+                //Console.log("Failed to retrieve the planet data.");
             });
         };
 

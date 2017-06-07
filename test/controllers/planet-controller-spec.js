@@ -35,6 +35,10 @@ describe("Given a planets controller", function() {
             expect(controller.planetData.planetInfo.length > 0).toBeTruthy();
         })
 
+        it ("then the controller has no selected planet", function() {
+            expect(controller.selectedPlanet).toBe("");
+        })
+
         describe("when the planet descriptions are retrieved", function() {
             it("Should describe mercury correctly", function() {
                 expect(controller.describePlanet("mercury")).toEqual("It's small and hot");

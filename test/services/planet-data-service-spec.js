@@ -55,7 +55,6 @@ describe("Given a planet data service", function() {
         beforeEach(function() {
             deferredPromise = planetDataService.getPlanetData()
                 .then(function(returnedData) {
-                    console.log("title " + returnedData.title);
                     expect(returnedData.title).toEqual('Planet Data');
             });
 
