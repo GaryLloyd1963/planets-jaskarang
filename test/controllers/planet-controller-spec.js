@@ -1,4 +1,4 @@
-describe("Given an planets controller", function() {
+describe("Given a planets controller", function() {
     var scope, rootScope,
         controller,
 
@@ -32,24 +32,24 @@ describe("Given an planets controller", function() {
         });
 
         it ("then sets the controller planet data", function() {
-            expect(scope.planetData.planetInfo.length > 0).toBeTruthy();
+            expect(controller.planetData.planetInfo.length > 0).toBeTruthy();
         })
 
         describe("when the planet descriptions are retrieved", function() {
             it("Should describe mercury correctly", function() {
-                expect(scope.describePlanet("mercury")).toEqual("It's small and hot");
+                expect(controller.describePlanet("mercury")).toEqual("It's small and hot");
             });
         
             it("Should describe mars correctly", function() {
-                expect(scope.describePlanet("mars")).toEqual("It's red");
+                expect(controller.describePlanet("mars")).toEqual("It's red");
             });
 
             it("Should describe unknown correctly", function() {
-                expect(scope.describePlanet("unknown")).toEqual("I didn't know unknown was a planet!");
+                expect(controller.describePlanet("unknown")).toEqual("I didn't know unknown was a planet!");
             });
 
             it("Should describe neptune correctly", function() {
-                expect(scope.describePlanet("neptune")).toEqual("It's really blue");
+                expect(controller.describePlanet("neptune")).toEqual("It's really blue");
             });
         });
     });

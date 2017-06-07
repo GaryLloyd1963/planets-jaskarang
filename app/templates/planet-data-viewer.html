@@ -1,11 +1,11 @@
-<div ng-controller="PlanetController">
+<div ng-controller="PlanetController as vm">
     <div id="planet-data-heading">
         <h1>Pick a planet</h1>
         <div id="planet-selector">
-            <select ng-model="selectedPlanet" ng-disabled="planetDataIsEmpty()">
-                <option ng-repeat="planet in planetData.planetInfo">{{planet.name}}</option>
+            <select ng-model="vm.selectedPlanet" ng-disabled="vm.planetDataIsEmpty()">
+                <option ng-repeat="planet in vm.planetData.planetInfo">{{planet.name}}</option>
             </select>
         </div>
-        <div> Selected planet description = {{describePlanet(selectedPlanet)}}</div>
+        <div> Selected planet description = {{vm.describePlanet(vm.selectedPlanet)}}</div>
     </div>
 </div>
