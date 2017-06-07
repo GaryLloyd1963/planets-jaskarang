@@ -32,7 +32,7 @@ describe("Given an planets controller", function() {
         });
 
         it ("then sets the controller planet data", function() {
-            expect(scope.planetData.length > 0).toBeTruthy();
+            expect(scope.planetData.planetInfo.length > 0).toBeTruthy();
         })
 
         describe("when the planet descriptions are retrieved", function() {
@@ -46,6 +46,10 @@ describe("Given an planets controller", function() {
 
             it("Should describe unknown correctly", function() {
                 expect(scope.describePlanet("unknown")).toEqual("I didn't know unknown was a planet!");
+            });
+
+            it("Should describe neptune correctly", function() {
+                expect(scope.describePlanet("neptune")).toEqual("It's really blue");
             });
         });
     });
