@@ -11,7 +11,6 @@ app.factory("planetDataService", ["$resource", "$q", "serviceUris",
 
             getPlanetData: function () {
                 if ( serviceUris.planetDataServiceUrl.indexOf('fake-service') !== -1) {
-                    console.log("get fake data");
                     return this.getFakeServicePlanetData();
                 }
 
