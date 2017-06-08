@@ -10,6 +10,10 @@ function($scope, planetDataService) {
     }
 
     vm.describePlanet = function(planetName) {
+        if ( planetName === null || planetName === "") {
+            return "No planet selected yet.";
+        }
+
         if ( !vm.planetData || vm.planetData.length == 0) {
             return "Oh dear still waiting for the data";
         }

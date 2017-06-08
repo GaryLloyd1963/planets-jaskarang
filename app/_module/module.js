@@ -1,1 +1,1 @@
-var app = angular.module('planets', ["ngResource"]);
+var app = angular.module('planets', ['ngResource']);
