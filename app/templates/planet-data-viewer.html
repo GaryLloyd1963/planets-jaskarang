@@ -1,6 +1,6 @@
 <div ng-controller="PlanetController as vm">
     <div id="planet-data-heading" >
-        <h1>Pick a planet</h1>
+        <h1>Pick a planet please</h1>
         <div id="planet-selector" style="width:200px">
             <select class="form-control" ng-model="vm.selectedPlanet" ng-disabled="vm.planetDataIsEmpty()">
                 <option ng-repeat="planet in vm.planetData.planetInfo">{{planet.name}}</option>
@@ -10,5 +10,22 @@
             <span class="label label-warning">Selected planet description: </span>
             <span class="label label-success">{{vm.describePlanet(vm.selectedPlanet)}}</span>
         </h2>
+    </div>
+    <div>
+        <h1>Layout test area</h1>
+        <div id="planets-wrapper">
+            <div id="planets-leftcolumn" class="leftcolumn">
+                Label
+                <h2>
+                    <span class="label label-warning">Selected planet description: </span>
+                </h2>
+            </div>
+            <div id="planets-rightcolumn" class="rightcolumn">
+                Description
+                <h2>
+                    <span class="label label-success">{{vm.describePlanet(vm.selectedPlanet)}}</span>
+                </h2>
+            </div>
+        </div>
     </div>
 </div>

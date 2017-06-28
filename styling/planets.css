@@ -1,0 +1,16 @@
+.leftcolumn, .rightcolumn {
+    border: 1px solid white;
+    float: left;
+    min-height: 450px;
+    color: white;
+}
+
+.leftcolumn {
+     width: 500px;
+     background-color: #111;
+}
+
+.rightcolumn {
+     width: 500px;
+     background-color: #777;
+}
